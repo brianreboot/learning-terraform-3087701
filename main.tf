@@ -14,6 +14,10 @@ data "aws_ami" "app_ami" {
   owners = ["348016465244"]
 }
 
+resource "aws_vpc" var.vpc_terraform {
+  cidr_block = 10.0.0.0/16
+}
+
 resource "aws_instance" "web" {
   ami           = data.aws_ami.app_ami.id
   instance_type = var.t3_micro
