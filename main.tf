@@ -3,7 +3,7 @@ data "aws_ami" "app_ami" {
 
   filter {
     name   = "name"
-    values = ["bitnami-tomcat-*-x86_64-hvm-ebs-nami"]
+    values = ["Windows Server 2022 Base"]
   }
 
   filter {
@@ -11,14 +11,14 @@ data "aws_ami" "app_ami" {
     values = ["hvm"]
   }
 
-  owners = ["979382823631"] # Bitnami
+  owners = ["348016465244"]
 }
 
 resource "aws_instance" "web" {
   ami           = data.aws_ami.app_ami.id
-  instance_type = var.t3_nano
+  instance_type = var.t3_xlarge
 
   tags = {
-    Name = "HelloWorld"
+    Name = "Brian Terraform"
   }
 }
