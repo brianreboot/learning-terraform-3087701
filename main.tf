@@ -14,11 +14,6 @@ data "aws_ami" "app_ami" {
   owners = ["348016465244"]
 }
 
-import {
-  to = aws_vpc.terraform-vpc
-  id = "vpc-017882a3fcce1c41c"
-}
-
 resource "aws_instance" "web" {
   ami           = data.aws_ami.app_ami.id
   instance_type = var.t3_micro
