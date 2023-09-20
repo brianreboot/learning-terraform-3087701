@@ -12,8 +12,3 @@ variable "t3_xlarge" {
   description = "Type of EC2 instance to provision"
   default     = "t3.xlarge"
 }
-
-variable "vpc_terraform" {
-  description = "Deploy into the terraform VPC"
-  default     = "terraform-vpc"
-}
