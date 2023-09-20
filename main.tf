@@ -15,7 +15,7 @@ data "aws_ami" "app_ami" {
 }
 
 resource "aws_vpc" "terraform-vpc" {
-  cidr_block = 10.0.0.0/16
+  cidr_block = "10.0.0.0/16"
 }
 
 resource "aws_instance" "web" {
