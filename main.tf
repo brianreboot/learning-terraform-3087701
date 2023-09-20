@@ -23,6 +23,6 @@ resource "aws_instance" "web" {
   instance_type = var.t3_micro
 
   tags = {
-    Name = "Brian Terraform 12345"
+    Name = "Brian Terraform 1234567"
   }
 }
