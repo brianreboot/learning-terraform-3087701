@@ -14,7 +14,7 @@ data "aws_ami" "app_ami" {
   owners = ["348016465244"]
 }
 
-resource "aws_vpc" var.vpc_terraform {
+resource "aws_vpc" "terraform-vpc" {
   cidr_block = 10.0.0.0/16
 }
 
