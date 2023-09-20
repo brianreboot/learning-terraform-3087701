@@ -14,8 +14,9 @@ data "aws_ami" "app_ami" {
   owners = ["348016465244"]
 }
 
-resource "aws_vpc" "terraform-vpc" {
-  cidr_block = "10.0.0.0/16"
+import {
+  to = aws_vpc.terraform_vpc
+  id = "vpc-017882a3fcce1c41c"
 }
 
 resource "aws_instance" "web" {
