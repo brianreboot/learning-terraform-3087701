@@ -1,3 +1,7 @@
+resource "aws_vpc" "terraform-vpc" {
+  cidr_block = "10.0.0.0/16"
+}
+
 data "aws_ami" "app_ami" {
   most_recent = true
 
@@ -19,6 +23,6 @@ resource "aws_instance" "web" {
   instance_type = var.t3_micro
 
   tags = {
-    Name = "Brian Terraform"
+    Name = "Brian Goober"
   }
 }
