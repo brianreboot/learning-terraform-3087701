@@ -19,6 +19,6 @@ resource "aws_instance" "web" {
   instance_type = var.t3_nano
 
   tags = {
-    Name = "Brian Terraform 12345"
+    Name = "Brian Terraform"
   }
 }
