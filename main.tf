@@ -1,3 +1,7 @@
+resource "aws_vpc" "terraform-vpc" {
+  cidr_block = "10.0.0.0/16"
+}
+
 data "aws_ami" "app_ami" {
   most_recent = true
 
