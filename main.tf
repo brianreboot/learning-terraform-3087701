@@ -1,5 +1,12 @@
 resource "aws_vpc" "terraform-vpc" {
-  cidr_block = "10.0.0.0/16"
+    cidr_block                           = "10.0.0.0/16"
+    id                                   = "vpc-017882a3fcce1c41c"
+    tags                                 = {
+        "Name" = "terraform-vpc"
+    }
+    tags_all                             = {
+        "Name" = "terraform-vpc"
+    }
 }
 
 data "aws_ami" "app_ami" {
