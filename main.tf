@@ -18,12 +18,7 @@ resource "aws_instance" "web" {
   ami           = data.aws_ami.app_ami.id
   instance_type = var.t3_nano
 
-<<<<<<< HEAD
-  tags   = {
-    Name = "Brian Test"
-=======
   tags = {
     Name = "Brian Terraform 12345"
->>>>>>> b861bdb69373596df9de051ab107df25449875a8
   }
 }
